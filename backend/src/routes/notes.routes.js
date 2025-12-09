@@ -1,13 +1,10 @@
 const express = require("express")
 const router = express.Router()
+const notesController = require("../controllers/notes.controller")
 
-router.get("/", (req,res) => {
-    res.send("hola")
-})
+router.get("/", notesController.getAllNotes)
 
-router.post("/", (req,res) => {
-    res.send("hola")
-})
+router.post("/", notesController.createNote)
 
 router.put("/:id", (req,res) => {
     res.send("hola")
