@@ -6,12 +6,8 @@ router.get("/", notesController.getAllNotes)
 
 router.post("/", notesController.createNote)
 
-router.put("/:id", (req,res) => {
-    res.send("hola")
-})
+router.put("/:id", notesController.updateNote)
 
-router.delete("/:id", (req,res) => {
-    res.send("hola")
-})
+router.delete("/:id", notesController.deleteNote)
 
 module.exports = router;
